@@ -44,8 +44,8 @@ Deadline is Sunday. Saturday is buffer only. Do not add scope. If we fall behind
 ### Tonight (Thursday)
 | # | Branch | What | Tier | Git skill |
 |---|---|---|---|---|
-| 0 | `chore/repo-hygiene` | .gitignore + ADR 0001 filled in | **Angel** | Stage specific files, not `git add .` |J
-| 1 | `chore/claude-context` | Add this CLAUDE.md | Angel | Feature branchJ`` + PR flow, even solo |
+| 0 | `chore/repo-hygiene` | .gitignore + ADR 0001 filled in | **Angel** | Stage specific files, not `git add .` |
+| 1 | `chore/claude-context` | Add this CLAUDE.md | Angel | Feature branch + PR flow, even solo |
 | 2 | `chore/scaffold-next` | Next.js (TypeScript, App Router) scaffolded into the existing repo, keeping README, docs/, and merging .gitignore. `create-next-app` won't run in a non-empty folder with its own git, so scaffold to a temp dir with `--disable-git` and move files in. Walk me through every top-level file it created. | Claude | `git status` vs `git diff --staged`; reading a big diff with `git diff --stat` |
 | 3 | `chore/local-infra` | `docker-compose.yml` with Postgres and Redis, `.env.example` (committed) vs `.env.local` (ignored), a `db` client module using `pg` | Claude writes, Angel explains ports/volumes/env | `git add -p` (stage hunks, not files) |
 | 4 | `feat/db-schema` | Raw SQL migration: schools, organizations, events, users, rsvps. Foreign keys, `UNIQUE (user_id, event_id)` on rsvps, timestamps. A tiny script to run migrations. | **Angel types the SQL** | `git commit --amend` (fix the last commit before pushing) |
